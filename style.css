@@ -27,6 +27,10 @@ li {
   list-style: none;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .design {
   background-color: #ffdb06;
 }
@@ -40,22 +44,31 @@ li {
   display: flex;
 }
 
+.landing-container {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
 .landing-left {
   width: 60%;
   padding-top: 5rem;
-  padding-left: 5rem;
+  /* padding-left: 5rem; */
 }
 
 .landing-hero {
   background-color: white;
   width: 30rem;
   height: 30rem;
-  margin-left: 5rem;
-  margin-bottom: 2rem;
+  /* margin-left: 5rem; */
+  margin-bottom: 4rem;
 }
 
 .landing-left p {
-  width: 90%;
+  width: 100%;
   /* background-color: white; */
   font-size: 1.2rem;
 }
@@ -70,4 +83,143 @@ nav ul {
   justify-content: space-between;
   padding: 1rem;
   font-size: 1.2rem;
+  margin-bottom: 5rem;
+}
+
+.name h1 {
+  font-size: 8rem;
+  text-align: right;
+  padding-right: 1.5rem;
+  margin-top: -3.5rem;
+}
+
+.title-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5rem;
+}
+
+.title-container h2 {
+  font-size: 2.8rem;
+  padding: 1rem;
+}
+
+.title-container h2:first-child {
+  color: white;
+  background-color: black;
+}
+
+.location-container {
+  display: flex;
+  float: right;
+  width: 13rem;
+  justify-content: flex-end;
+  margin-top: 5rem;
+}
+
+.location-container h3 {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.location-container h3:nth-child(2) {
+  color: white;
+  background-color: black;
+}
+
+.case-study {
+  width: 100%;
+  overflow: hidden;
+  margin-top: -5rem;
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.case-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 270rem;
+  transform: translateX(-20rem);
+  /* overflow-x: scroll; */
+}
+
+.case-text-container img {
+  width: 40rem;
+}
+
+.work-container {
+  width: 100%;
+  max-width: 90rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+.work {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid black;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+.work .text-container {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work .text-container h1 {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.text-container ul li {
+  margin-top: 0.5rem;
+}
+
+.text-container ul li span {
+  font-weight: 800;
+  margin-right: 0.3rem;
+}
+
+.work .image-container {
+  background-color: white;
+  /* width: 35%; */
+  width: 25rem;
+  height: 20rem;
+}
+
+.more {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+footer {
+  padding-bottom: 1rem;
+}
+
+footer .contact-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+footer .contact-container h1 {
+  font-size: 1.5rem;
+}
+
+footer .contact-container h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+footer .copyright h3 {
+  font-weight: 500;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
