@@ -193,11 +193,13 @@ nav ul {
 
 .case-study {
   width: 100%;
+  max-width: 90rem;
   overflow: hidden;
-  margin-top: -5rem;
   position: relative;
   z-index: 1;
   padding: 2rem;
+  margin: auto;
+  margin-top: -5rem;
 }
 
 .case-text-container {
@@ -268,6 +270,9 @@ nav ul {
 
 footer {
   padding-bottom: 1rem;
+  width: 100%;
+  max-width: 90rem;
+  margin: auto;
 }
 
 footer .contact-container {
