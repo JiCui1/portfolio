@@ -84,16 +84,48 @@ main {
 
 .landing-left {
   width: 60%;
-  padding-top: 5rem;
+  padding-top: 3rem;
   /* padding-left: 5rem; */
 }
 
 .landing-hero {
-  background-color: white;
-  width: 25rem;
+  width: 80%;
+  max-width: 35rem;
   height: 25rem;
   /* margin-left: 5rem; */
   margin-bottom: 3rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.landing-hero img {
+  width: 33%;
+  position: absolute;
+}
+
+#bird {
+  left: 20rem;
+  top: 0;
+}
+
+#tap-hand {
+  left: 15rem;
+  top: 13rem;
+  z-index: 1;
+}
+
+#head {
+  left: 0.3rem;
+  z-index: 2;
+  transform: scale(0);
+}
+
+#heart {
+  z-index: 1;
+  left: 1rem;
+  top: 1rem;
+  transform: scale(0);
 }
 
 .landing-left p {
@@ -194,6 +226,7 @@ nav ul {
   border-bottom: 3px solid black;
   padding-bottom: 4rem;
   padding-top: 4rem;
+  height: 30rem;
 }
 
 .work-dev {
@@ -225,7 +258,7 @@ nav ul {
   background-color: white;
   /* width: 35%; */
   width: 25rem;
-  height: 20rem;
+  height: 0rem;
 }
 
 .more {
