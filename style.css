@@ -8,10 +8,31 @@
 /* {
     font-weight: 500;  medium
     font-weight: 800;  extrabold
+    color yellow: #ffdb06
+    color blue: #1e5eff
 } */
+
+body {
+  overflow-x: hidden;
+}
+
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  display: none;
+  opacity: 0;
+}
 
 .design > * {
   color: black;
+}
+
+.dev > * {
+  color: white;
 }
 
 p {
@@ -31,8 +52,16 @@ main {
   overflow-x: hidden;
 }
 
+.hide {
+  display: none;
+}
+
 .design {
   background-color: #ffdb06;
+}
+
+.dev {
+  background-color: #0a4fff;
 }
 
 .landing {
@@ -75,6 +104,7 @@ main {
 
 .landing-right {
   background-color: white;
+  color: black;
   width: 40%;
 }
 
@@ -84,6 +114,7 @@ nav ul {
   padding: 1rem;
   font-size: 1.2rem;
   margin-bottom: 5rem;
+  color: black;
 }
 
 .name h1 {
@@ -91,6 +122,7 @@ nav ul {
   text-align: right;
   padding-right: 1.5rem;
   margin-top: -3.5rem;
+  color: black;
 }
 
 .title-container {
@@ -162,6 +194,10 @@ nav ul {
   border-bottom: 3px solid black;
   padding-bottom: 4rem;
   padding-top: 4rem;
+}
+
+.work-dev {
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 .work .text-container {
