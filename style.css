@@ -351,6 +351,7 @@ footer .copyright h3 {
   padding-top: 6rem;
   margin: auto;
   margin-bottom: 2rem;
+  border-bottom: 3px solid black;
 }
 
 .case-post h1 {
