@@ -261,6 +261,11 @@ nav ul {
   /* width: 35%; */
   width: 25rem;
   height: 0rem;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
 }
 
 .more {
@@ -296,4 +301,43 @@ footer .copyright h3 {
   text-align: center;
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+/* dev style */
+#computer {
+  width: 50%;
+  z-index: 1;
+}
+
+#rock1 {
+  width: 15%;
+  left: 10rem;
+  z-index: 1;
+}
+
+#rock2 {
+  width: 10%;
+  left: 15rem;
+  z-index: 1;
+}
+
+#rock3 {
+  width: 20%;
+  z-index: 1;
+}
+
+#rock4 {
+  width: 15%;
+  z-index: 1;
+}
+
+#cir {
+  width: 15%;
+  z-index: 1;
+}
+
+#dark-cir {
+  width: 70%;
+  position: absolute;
+  left: 3rem;
 }
