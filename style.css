@@ -23,8 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  display: none;
-  opacity: 0;
+  display: flex;
 }
 
 .design > * {
@@ -140,7 +139,7 @@ main {
   width: 40%;
 }
 
-nav ul {
+.landing-right nav ul {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -340,4 +339,71 @@ footer .copyright h3 {
   width: 70%;
   position: absolute;
   left: 3rem;
+}
+
+/* case study style  */
+
+.case-post {
+  /* border: 2px solid black; */
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  padding-top: 6rem;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.case-post h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.post-hero-container {
+  width: 100%;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.post-hero-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.case-post p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-top: 4rem;
+}
+
+.post-nav {
+  padding: 0rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffdb06;
+}
+
+.post-nav-container h3 {
+  padding-left: 3rem;
+}
+
+.post-nav-container {
+  width: 100%;
+  max-width: 90rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  padding-right: 2.5rem;
+  width: 40%;
 }

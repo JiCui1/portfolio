@@ -6,30 +6,43 @@ const heart = document.getElementById("heart");
 const head = document.getElementById("head");
 const landingContainer = document.querySelector(".landing-hero");
 const workArray = document.querySelectorAll(".work");
-// const loadScreen = document.querySelector(".loading");
+const loadScreen = document.querySelector(".loading");
+const loadingText = document.getElementById("loading-text");
+const postSide = document.querySelectorAll(".post-side");
 
-// loadTimeline = gsap.timeline();
+const loadingAnim = () => {
+  document.body.style.overflowY = "hidden";
 
-// loadScreen.opacity = 0;
-// document.body.style.overflowY = "hidden";
+  loadScreen.style.opacity = 1;
 
-// loadTimeline.to(loadScreen, {
-//   opacity: 1,
-//   duration: 0.5,
-// });
+  gsap.fromTo(
+    loadingText,
+    {
+      x: 200,
+    },
+    {
+      x: -200,
+      duration: 1,
+      yoyo: true,
+      repeat: 2,
+    }
+  );
 
-// loadTimeline.to(loadScreen, {
-//   opacity: 0,
-//   delay: 1.5,
-//   duration: 0.5,
-//   onComplete: function () {
-//     setTimeout(function () {
-//       document.body.style.overflowY = "scroll";
-//       loadScreen.style.opacity = 0;
-//       loadScreen.style.display = "none";
-//     }, 50);
-//   },
-// });
+  gsap.to(loadScreen, {
+    opacity: 0,
+    delay: 1.5,
+    duration: 0.5,
+    onComplete: function () {
+      setTimeout(function () {
+        document.body.style.overflowY = "scroll";
+        loadScreen.style.opacity = 0;
+        loadScreen.style.display = "none";
+      }, 50);
+    },
+  });
+};
+
+loadingAnim();
 
 //hero img animation
 const initAnim = () => {
@@ -68,7 +81,9 @@ const initAnim = () => {
   }
 };
 
-initAnim();
+setTimeout(function () {
+  initAnim();
+}, 1700);
 
 const heroClickAnim = () => {
   if (tapHand) {
@@ -90,8 +105,11 @@ const heroClickAnim = () => {
   }
 };
 
-landingContainer.onclick = heroClickAnim;
+if (landingContainer) {
+  landingContainer.onclick = heroClickAnim;
+}
 
+// work image animation
 workArray.forEach((work) => {
   work.onmouseenter = function () {
     imgCon = work.querySelector(".image-container");
@@ -112,18 +130,19 @@ workArray.forEach((work) => {
 });
 
 //case study side scroll on window scroll
-let scrollOldValue = 0;
-let scrollNewValue = 0;
-let scrollUp = false;
-//-20rem is initial value
-let scrollVal = -20;
-window.onscroll = function (e) {
-  scrollNewValue = window.pageYOffset;
-  if (scrollOldValue < scrollNewValue) {
-    scrollVal -= 0.7;
-  } else if (scrollOldValue > scrollNewValue) {
-    scrollVal += 0.7;
-  }
-  caseScroll.style.transform = `translateX(${scrollVal}rem)`;
-  scrollOldValue = scrollNewValue;
-};
+if (caseScroll) {
+  let scrollOldValue = 0;
+  let scrollNewValue = 0;
+  //-20rem is initial value
+  let scrollVal = -20;
+  window.onscroll = function (e) {
+    scrollNewValue = window.pageYOffset;
+    if (scrollOldValue < scrollNewValue) {
+      scrollVal -= 0.7;
+    } else if (scrollOldValue > scrollNewValue) {
+      scrollVal += 0.7;
+    }
+    caseScroll.style.transform = `translateX(${scrollVal}rem)`;
+    scrollOldValue = scrollNewValue;
+  };
+}
