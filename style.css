@@ -14,6 +14,7 @@
 
 body {
   overflow-x: hidden;
+  cursor: none;
 }
 
 .loading {
@@ -34,6 +35,37 @@ body {
   color: white;
 }
 
+.cursor {
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.cursor-cir {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  margin: auto;
+  transition-duration: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor-text {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.3rem;
+  transition-duration: 0.2s;
+  color: black;
+}
+
 p {
   font-weight: 500;
 }
@@ -41,6 +73,7 @@ p {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: none;
 }
 
 li {
@@ -95,7 +128,6 @@ main {
   margin-bottom: 3rem;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
 }
 
 .landing-hero img {
@@ -146,6 +178,10 @@ main {
   font-size: 1.2rem;
   margin-bottom: 5rem;
   color: black;
+}
+
+.landing-right nav ul li:hover {
+  text-decoration: wavy overline;
 }
 
 .name h1 {
@@ -407,4 +443,8 @@ footer .copyright h3 {
   padding: 1rem;
   padding-right: 2.5rem;
   width: 40%;
+}
+
+.post-nav-container ul li:hover {
+  text-decoration: wavy overline;
 }

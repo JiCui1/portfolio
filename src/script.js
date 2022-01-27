@@ -9,6 +9,10 @@ const workArray = document.querySelectorAll(".work");
 const loadScreen = document.querySelector(".loading");
 const loadingText = document.getElementById("loading-text");
 const postSide = document.querySelectorAll(".post-side");
+const cursor = document.querySelector(".cursor");
+const cursorCir = document.querySelector(".cursor-cir");
+const cursorText = document.querySelector(".cursor-text");
+const aTag = document.querySelectorAll("a");
 
 const loadingAnim = () => {
   document.body.style.overflowY = "hidden";
@@ -46,6 +50,20 @@ loadingAnim();
 
 //hero img animation
 const initAnim = () => {
+  gsap.fromTo(
+    cursor,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 1,
+      onComplete: function () {
+        cursor.style.opacity = 1;
+      },
+    }
+  );
+
   //check if on design or dev
   if (tapHand) {
     gsap.to(bird, {
@@ -107,11 +125,18 @@ const heroClickAnim = () => {
 
 if (landingContainer) {
   landingContainer.onclick = heroClickAnim;
+  landingContainer.onmouseenter = function () {
+    cursorCir.style.backgroundColor = "#64F5DB";
+  };
+  landingContainer.onmouseleave = function () {
+    cursorCir.style.backgroundColor = "transparent";
+  };
 }
 
 // work image animation
 workArray.forEach((work) => {
   work.onmouseenter = function () {
+    cursorCir.style.backgroundColor = "#64F5DB";
     imgCon = work.querySelector(".image-container");
     gsap.to(imgCon, {
       height: "20rem",
@@ -120,12 +145,23 @@ workArray.forEach((work) => {
     });
   };
   work.onmouseleave = function () {
+    cursorCir.style.backgroundColor = "transparent";
     imgCon = work.querySelector(".image-container");
     gsap.to(imgCon, {
       height: "0rem",
       duration: 1,
       ease: "Expo.easeOut",
     });
+  };
+});
+
+//cursor animation for a tag
+aTag.forEach((a) => {
+  a.onmouseenter = function () {
+    cursorCir.style.backgroundColor = "#64F5DB";
+  };
+  a.onmouseleave = function () {
+    cursorCir.style.backgroundColor = "transparent";
   };
 });
 
@@ -146,3 +182,9 @@ if (caseScroll) {
     scrollOldValue = scrollNewValue;
   };
 }
+
+//cursor follow
+window.onmousemove = (e) => {
+  cursor.style.top = e.pageY - 12 + "px";
+  cursor.style.left = e.pageX - 19 + "px";
+};
