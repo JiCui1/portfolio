@@ -188,3 +188,7 @@ window.onmousemove = (e) => {
   cursor.style.top = e.pageY - 12 + "px";
   cursor.style.left = e.pageX - 19 + "px";
 };
+
+document.body.onscroll = (e) => {
+  console.log(e);
+};
