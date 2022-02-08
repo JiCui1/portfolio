@@ -403,14 +403,14 @@ footer .copyright h3 {
   font-weight: 500;
   font-size: 1.2rem;
 }
-.case-post h6 a {
+.case-post h5 a {
   color: #0a4fff;
   font-weight: 800;
 }
 
 .case-post h3 {
   font-size: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .post-hero-container {
@@ -449,9 +449,9 @@ footer .copyright h3 {
   min-height: 20rem;
   border: 3px solid black;
   margin-top: -1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   display: none;
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 .bar-container img {
@@ -504,7 +504,11 @@ span {
   align-items: center;
 }
 
-.post-nav ul {
+.post-nav-container h3 {
+  margin-top: 0;
+}
+
+.post-nav-container ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -519,5 +523,48 @@ span {
 
 .interview-questions li {
   font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.key-quotes {
+  width: 90%;
+  padding: 1.5rem;
+  border: 3px dotted black;
+  text-align: center;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.key-quotes h5 {
   margin-top: 1rem;
+}
+.key-quotes h3 {
+  margin-top: 1rem;
+}
+
+.product-requirement {
+  margin-top: 1rem;
+}
+.product-requirement li {
+  margin-top: 1rem;
+}
+
+.ar-task-flow {
+  display: flex;
+  justify-content: center;
+}
+
+.ar-task-flow img {
+  margin-top: 1rem;
+  width: 20%;
+}
+
+.site-map-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.site-map-container img {
+  max-width: 13rem;
 }
