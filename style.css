@@ -290,7 +290,6 @@ main {
 }
 
 .work .image-container {
-  background-color: white;
   /* width: 35%; */
   width: 25rem;
   height: 0rem;
@@ -563,6 +562,7 @@ span {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .site-map-container img {
