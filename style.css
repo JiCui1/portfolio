@@ -387,6 +387,10 @@ footer .copyright h3 {
   border-bottom: 3px solid black;
 }
 
+.case-post iframe {
+  margin: auto;
+}
+
 .case-post h1 {
   text-align: center;
   font-size: 4rem;
