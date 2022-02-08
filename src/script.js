@@ -184,15 +184,30 @@ if (caseScroll) {
   };
 }
 
+let mouseX = 0;
+let mouseY = 0;
+let intv = 0;
+
 //cursor follow
 window.onmousemove = (e) => {
-  cursor.style.top = e.pageY - 20 + "px";
-  cursor.style.left = e.pageX + 20 + "px";
+  // cursor.style.top = e.pageY - 20 + "px";
+  // cursor.style.left = e.pageX + 20 + "px";
+
+  mouseX = e.clientX / 16 - 45 / 16 + 3 + "rem";
+  mouseY = e.clientY / 16 - 45 / 16 + "rem";
 };
 
-document.body.onscroll = (e) => {
-  console.log(e);
+const mouseMove = () => {
+  intv += 1;
+  cursor.style.left = mouseX;
+  cursor.style.top = mouseY;
+  window.requestAnimationFrame(mouseMove);
 };
+
+mouseMove();
+// document.body.onscroll = (e) => {
+//   console.log(e);
+// };
 
 // collapse bar
 if (barTextAll) {
