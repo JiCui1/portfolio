@@ -13,6 +13,7 @@ const cursor = document.querySelector(".cursor");
 const cursorCir = document.querySelector(".cursor-cir");
 const cursorText = document.querySelector(".cursor-text");
 const aTag = document.querySelectorAll("a");
+const barTextAll = document.querySelectorAll(".bar-text");
 
 const loadingAnim = () => {
   document.body.style.overflowY = "hidden";
@@ -185,10 +186,23 @@ if (caseScroll) {
 
 //cursor follow
 window.onmousemove = (e) => {
-  cursor.style.top = e.pageY - 12 + "px";
-  cursor.style.left = e.pageX - 19 + "px";
+  cursor.style.top = e.pageY - 20 + "px";
+  cursor.style.left = e.pageX + 20 + "px";
 };
 
 document.body.onscroll = (e) => {
   console.log(e);
 };
+
+// collapse bar
+if (barTextAll) {
+  barTextAll.forEach((barText) => {
+    barText.onclick = (e) => {
+      e.preventDefault();
+      let barContainer = barText.parentElement.nextElementSibling;
+      barContainer.style.display == "block"
+        ? (barContainer.style.display = "none")
+        : (barContainer.style.display = "block");
+    };
+  });
+}

@@ -14,7 +14,6 @@
 
 body {
   overflow-x: hidden;
-  cursor: none;
 }
 
 .loading {
@@ -73,7 +72,6 @@ p {
 a {
   text-decoration: none;
   color: inherit;
-  cursor: none;
 }
 
 li {
@@ -395,6 +393,26 @@ footer .copyright h3 {
   font-size: 4rem;
 }
 
+.case-post h5 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.case-post h6 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.case-post h6 a {
+  color: #0a4fff;
+  font-weight: 800;
+}
+
+.case-post h3 {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
 .post-hero-container {
   width: 100%;
   margin: auto;
@@ -409,7 +427,56 @@ footer .copyright h3 {
 .case-post p {
   font-size: 1.3rem;
   line-height: 1.6;
-  margin-top: 4rem;
+  margin-top: 0.5rem;
+}
+
+.case-post .bar-text {
+  text-align: center;
+  width: 80%;
+  padding: 1rem;
+  border: 3px solid black;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 8px;
+  background-color: #ffdb06;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.bar-container {
+  width: 100%;
+  min-height: 20rem;
+  border: 3px solid black;
+  margin-top: -1rem;
+  padding: 1rem;
+  display: none;
+  padding-top: 2rem;
+}
+
+.bar-container img {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.case-post h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.case-post .bar-text:hover {
+  color: #ffdb06;
+  background-color: black;
+}
+
+.double-process {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+span {
+  font-weight: 800;
 }
 
 .post-nav {
@@ -422,6 +489,7 @@ footer .copyright h3 {
   top: 0;
   left: 0;
   background-color: #ffdb06;
+  z-index: 2;
 }
 
 .post-nav-container h3 {
@@ -447,4 +515,9 @@ footer .copyright h3 {
 
 .post-nav-container ul li:hover {
   text-decoration: wavy overline;
+}
+
+.interview-questions li {
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
