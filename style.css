@@ -125,7 +125,7 @@ main {
   max-width: 35rem;
   height: 25rem;
   /* margin-left: 5rem; */
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
 }
@@ -169,19 +169,7 @@ main {
   background-color: white;
   color: black;
   width: 40%;
-}
-
-.landing-right nav ul {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  font-size: 1.2rem;
-  margin-bottom: 5rem;
-  color: black;
-}
-
-.landing-right nav ul li:hover {
-  text-decoration: wavy overline;
+  padding-top: 7rem;
 }
 
 .name h1 {
@@ -263,7 +251,7 @@ main {
   border-bottom: 3px solid black;
   padding-bottom: 4rem;
   padding-top: 4rem;
-  height: 30rem;
+  min-height: 30rem;
 }
 
 .work-dev {
@@ -277,9 +265,43 @@ main {
   justify-content: space-between;
 }
 
+.work .text-container button {
+  width: 7rem;
+  height: 2.5rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.design .work .text-container button {
+  background-color: #ffdb06;
+  border: 2px solid black;
+}
+
+.dev .work .text-container button {
+  background-color: #0a4fff;
+  border: 2px solid white;
+  color: white;
+}
+
+.design .work .text-container button:hover {
+  background-color: black;
+  color: #ffdb06;
+}
+
+.dev .work .text-container button:hover {
+  background-color: white;
+  color: #0a4fff;
+}
+
+.work .text-container a {
+  width: 7rem;
+  height: 2.5rem;
+}
+
 .work .text-container h1 {
-  font-size: 5rem;
-  line-height: 1;
+  font-size: 4rem;
+  line-height: 1.2;
 }
 
 .text-container ul li {
@@ -493,8 +515,15 @@ span {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
+}
+
+.dev .post-nav {
+  background-color: #0a4fff;
+}
+
+.design .post-nav {
   background-color: #ffdb06;
-  z-index: 2;
 }
 
 .post-nav-container h3 {
@@ -524,6 +553,7 @@ span {
 
 .post-nav-container ul li:hover {
   text-decoration: wavy overline;
+  -webkit-text-decoration-line: overline;
 }
 
 .interview-questions li {
