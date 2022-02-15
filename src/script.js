@@ -137,7 +137,7 @@ if (landingContainer) {
 // work image animation
 workArray.forEach((work) => {
   work.onmouseenter = function () {
-    cursorCir.style.backgroundColor = "#64F5DB";
+    // cursorCir.style.backgroundColor = "#64F5DB";
     imgCon = work.querySelector(".image-container");
     gsap.to(imgCon, {
       height: "20rem",
@@ -146,7 +146,7 @@ workArray.forEach((work) => {
     });
   };
   work.onmouseleave = function () {
-    cursorCir.style.backgroundColor = "transparent";
+    // cursorCir.style.backgroundColor = "transparent";
     imgCon = work.querySelector(".image-container");
     gsap.to(imgCon, {
       height: "0rem",
