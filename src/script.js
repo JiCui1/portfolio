@@ -14,6 +14,8 @@ const cursorCir = document.querySelector(".cursor-cir");
 const cursorText = document.querySelector(".cursor-text");
 const aTag = document.querySelectorAll("a");
 const barTextAll = document.querySelectorAll(".bar-text");
+const menuIcon = document.querySelector(".menu-icon");
+const burgerMenu = document.querySelector(".burger-menu");
 
 const loadingAnim = () => {
   document.body.style.overflowY = "hidden";
@@ -221,3 +223,11 @@ if (barTextAll) {
     };
   });
 }
+
+menuIcon.onclick = function () {
+  if (burgerMenu.style.display == "none") {
+    burgerMenu.style.display = "flex";
+  } else {
+    burgerMenu.style.display = "none";
+  }
+};
