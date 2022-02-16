@@ -12,6 +12,10 @@
     color blue: #1e5eff
 } */
 
+html {
+  font-size: 16px;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -603,4 +607,69 @@ span {
 
 .site-map-container img {
   max-width: 13rem;
+}
+
+@media screen and (max-width: 1023px) {
+  html {
+    font-size: 16px;
+  }
+  .post-nav-container ul {
+    width: 60%;
+  }
+
+  #bird {
+    left: 10rem;
+    top: 0;
+  }
+
+  #tap-hand {
+    left: 12rem;
+    top: 10rem;
+    z-index: 1;
+  }
+
+  #head {
+    left: 0.3rem;
+    top: 2rem;
+    z-index: 2;
+    transform: scale(0);
+  }
+
+  #phone-hand {
+    top: 2rem;
+  }
+  .landing-hero {
+    margin-bottom: 0;
+  }
+  .name h1 {
+    font-size: 5rem;
+    line-height: 1.5;
+    /* margin-top: 1rem; */
+  }
+  .title-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .work .text-container h1 {
+    font-size: 2rem;
+  }
+
+  .work {
+    min-height: 20rem;
+  }
+
+  .work .image-container {
+    height: 17rem;
+  }
+  .work .text-container button {
+    width: 13rem;
+  }
+
+  .landing-hero img {
+    width: 40%;
+  }
+
+  .dev .landing-container {
+    margin-top: 5rem;
+  }
 }
