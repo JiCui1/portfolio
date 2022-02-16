@@ -16,6 +16,10 @@ const aTag = document.querySelectorAll("a");
 const barTextAll = document.querySelectorAll(".bar-text");
 const menuIcon = document.querySelector(".menu-icon");
 const burgerMenu = document.querySelector(".burger-menu");
+const galleryBtns = document.querySelectorAll(".gallery-custom-btn");
+const arProductBtns = document.querySelectorAll(".ar-product-btn");
+const arCase = document.getElementById("ar-product");
+const galleryArCase = document.getElementById("gallery-custom");
 
 const loadingAnim = () => {
   document.body.style.overflowY = "hidden";
@@ -231,3 +235,36 @@ menuIcon.onclick = function () {
     burgerMenu.style.display = "none";
   }
 };
+
+//design ar case study tab function
+if (galleryBtns) {
+  galleryBtns.forEach((btn) => {
+    btn.onclick = () => {
+      galleryBtns.forEach((btn) => {
+        btn.style.color = "#ffdb06";
+        btn.style.backgroundColor = "#000000";
+      });
+      arProductBtns.forEach((btn) => {
+        btn.style.color = "#000000";
+        btn.style.backgroundColor = "#ffdb06";
+      });
+      arCase.style.display = "none";
+      galleryArCase.style.display = "block";
+    };
+  });
+
+  arProductBtns.forEach((btn) => {
+    btn.onclick = () => {
+      galleryBtns.forEach((btn) => {
+        btn.style.color = "#000000";
+        btn.style.backgroundColor = "#ffdb06";
+      });
+      arProductBtns.forEach((btn) => {
+        btn.style.color = "#ffdb06";
+        btn.style.backgroundColor = "#000000";
+      });
+      arCase.style.display = "block";
+      galleryArCase.style.display = "none";
+    };
+  });
+}

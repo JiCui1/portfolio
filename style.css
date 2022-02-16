@@ -485,10 +485,7 @@ footer .copyright h3 {
 .bar-container {
   width: 100%;
   min-height: 20rem;
-  border: 3px solid black;
   margin-top: -1rem;
-  padding: 1.5rem;
-  display: none;
   padding-top: 3rem;
 }
 
@@ -500,11 +497,6 @@ footer .copyright h3 {
 .case-post h2 {
   font-size: 2rem;
   text-align: center;
-}
-
-.case-post .bar-text:hover {
-  color: #ffdb06;
-  background-color: black;
 }
 
 .double-process {
@@ -616,6 +608,47 @@ span {
   max-width: 13rem;
 }
 
+.tab-btns {
+  margin-top: 2rem;
+}
+
+.tab-btn {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.design .tab-btn {
+  color: black;
+  background: #ffdb06;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.design .active-btn {
+  color: #ffdb06;
+  background-color: #000000;
+}
+
+.tab-container article {
+  border: 2px solid black;
+  padding: 1rem;
+  margin-top: -2px;
+}
+
+#gallery-custom {
+  display: none;
+}
+
+.next-case h5 {
+  text-align: right;
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+.next-case h5:hover {
+  color: #4ebaa6;
+}
+
+/* tablet view  */
 @media screen and (max-width: 1023px) {
   html {
     font-size: 16px;
@@ -681,6 +714,7 @@ span {
   }
 }
 
+/* phone view  */
 @media screen and (max-width: 420px) {
   .landing-left {
     display: none;
@@ -770,6 +804,7 @@ span {
   .design .menu-line {
     background-color: #000000;
   }
+
   .dev .menu-line {
     background-color: #ffffff;
   }
