@@ -732,10 +732,12 @@ span {
 
   .title-container h2 {
     font-size: 2rem;
+    margin-top: -3rem;
   }
 
   .location-container h3 {
     font-size: 2rem;
+    margin-top: -3rem;
   }
 
   .work {
