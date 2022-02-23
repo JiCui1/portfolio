@@ -116,6 +116,7 @@ main {
   justify-content: space-around;
   align-items: center;
   margin: auto;
+  cursor: pointer;
 }
 
 .landing-left {
