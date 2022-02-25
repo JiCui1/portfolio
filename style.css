@@ -288,6 +288,7 @@ main {
 .design .work .text-container button {
   background-color: #ffdb06;
   border: 2px solid black;
+  color: black;
 }
 
 .dev .work .text-container button {
