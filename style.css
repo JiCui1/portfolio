@@ -431,6 +431,18 @@ footer .copyright h3 {
   left: 3rem;
 }
 
+.img-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-container img {
+  width: 90%;
+  margin-top: 1rem;
+}
+
 /* case study style  */
 
 .case-post {
