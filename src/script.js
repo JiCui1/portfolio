@@ -20,6 +20,24 @@ const galleryBtns = document.querySelectorAll(".gallery-custom-btn");
 const arProductBtns = document.querySelectorAll(".ar-product-btn");
 const arCase = document.getElementById("ar-product");
 const galleryArCase = document.getElementById("gallery-custom");
+const rock1 = document.getElementById("rock1");
+const rock2 = document.getElementById("rock2");
+const rock3 = document.getElementById("rock3");
+const rock4 = document.getElementById("rock4");
+const cir = document.getElementById("cir");
+const darkCir = document.getElementById("dark-cir");
+const computer = document.getElementById("computer");
+
+if (computer) {
+  darkCir.style.opacity = 0;
+  computer.style.opacity = 0;
+  computer.style.transformOrigin = "center right";
+  rock1.style.opacity = 0;
+  rock2.style.opacity = 0;
+  rock3.style.opacity = 0;
+  rock4.style.opacity = 0;
+  cir.style.opacity = 0;
+}
 
 const loadingAnim = () => {
   document.body.style.overflowY = "hidden";
@@ -106,8 +124,118 @@ const initAnim = () => {
   }
 };
 
+const initAnimDev = () => {
+  gsap.fromTo(
+    cursor,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 1,
+      onComplete: function () {
+        cursor.style.opacity = 1;
+      },
+    }
+  );
+
+  if (computer) {
+    gsap.fromTo(
+      darkCir,
+      {
+        scale: 0,
+        opacity: 0,
+      },
+      {
+        scale: 0.85,
+        opacity: 1,
+        duration: 1,
+        ease: "Expo.easeOut",
+      }
+    );
+    gsap.fromTo(
+      computer,
+      {
+        scale: 0,
+        x: 5,
+        opacity: 1,
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        x: 0,
+        duration: 1,
+        delay: 0.3,
+      }
+    );
+
+    gsap.to([rock1, rock2, rock3, rock4], {
+      opacity: 1,
+      duration: 0.5,
+      delay: 1.5,
+    });
+    gsap.fromTo(
+      rock1,
+      {
+        x: 30,
+        y: 150,
+      },
+      {
+        x: 90,
+        y: 50,
+        delay: 1,
+        duration: 7,
+      }
+    );
+    gsap.fromTo(
+      rock2,
+      {
+        x: -30,
+        y: 150,
+      },
+      {
+        x: 120,
+        y: 250,
+        delay: 1.7,
+        duration: 20,
+      }
+    );
+    gsap.fromTo(
+      rock3,
+      {
+        x: 150,
+        y: 150,
+      },
+      {
+        x: 180,
+        y: 280,
+        delay: 2.4,
+        duration: 15,
+      }
+    );
+    gsap.fromTo(
+      rock4,
+      {
+        x: 150,
+        y: 150,
+      },
+      {
+        x: 300,
+        y: 150,
+        delay: 2.4,
+        duration: 15,
+      }
+    );
+  }
+};
+
 setTimeout(function () {
-  initAnim();
+  if (tapHand) {
+    initAnim();
+  }
+  if (computer) {
+    initAnimDev();
+  }
 }, 1700);
 
 const heroClickAnim = () => {
@@ -124,6 +252,23 @@ const heroClickAnim = () => {
         scale: 0.5,
         x: 120,
         y: Math.floor(Math.random() * 200),
+        duration: 0.2,
+      }
+    );
+  }
+  if (computer) {
+    gsap.fromTo(
+      cir,
+      {
+        scale: 0,
+        x: 100,
+        y: 100,
+        opacity: 1,
+      },
+      {
+        scale: 2,
+        x: 300,
+        y: Math.floor(Math.random() * 200) + 100,
         duration: 0.2,
       }
     );
