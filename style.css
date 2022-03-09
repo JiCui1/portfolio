@@ -93,7 +93,8 @@ body {
 
 iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 400px;
+  /* aspect-ratio: 16 / 9; */
 }
 
 p {
