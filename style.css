@@ -91,6 +91,11 @@ body {
   transition-duration: 0.2s;
 }
 
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
 p {
   font-weight: 500;
 }
